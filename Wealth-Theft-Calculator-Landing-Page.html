@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wealth Theft Calculator - See What the Gender Wage Gap Cost You</title>
+    <style>
+        :root {
+            --burgundy: #8B3C5A;
+            --teal: #3D8B7B;
+            --pink: #F4E4EC;
+            --purple: #C8B4E6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header/Logo */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Section 1: Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--burgundy) 0%, #6B2C4A 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-text {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--teal);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #2c6d5f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Section 2: Validation */
+        .validation-section {
+            background: var(--pink);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: var(--burgundy);
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .validation-text {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #2c2c2c;
+        }
+
+        .story-list {
+            list-style: none;
+            margin: 30px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .story-list li {
+            font-size: 1.2em;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            background: white;
+            border-left: 5px solid var(--burgundy);
+            border-radius: 5px;
+        }
+
+        .quote-box {
+            background: var(--purple);
+            border: 4px solid var(--burgundy);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 700px;
+            font-size: 1.5em;
+            font-style: italic;
+            color: white;
+            text-align: center;
+        }
+
+        /* Section 3: Benefits */
+        .benefits-section {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .benefit-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: #C8B4E6;
+            border: 4px solid var(--burgundy);
+            border-radius: 20px;
+            padding: 40px 30px;
+            font-size: 1.5em;
+            color: white;
+            text-align: center;
+        }
+
+        /* Section 4: Comparisons */
+        .comparison-section {
+            background: var(--pink);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .comparison-intro {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #2c2c2c;
+        }
+
+        .comparison-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+            justify-items: center;
+        }
+
+        .comparison-card {
+            background: var(--pink);
+            border: 3px solid var(--burgundy);
+            border-radius: 20px;
+            padding: 25px;
+            color: #2c2c2c;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .comparison-card h3 {
+            color: var(--burgundy);
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .comparison-card p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: linear-gradient(135deg, var(--burgundy) 0%, #6B2C4A 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-container h2 {
+            color: var(--burgundy);
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container p {
+            color: #2c2c2c;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c2c2c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1em;
+            border: 2px solid var(--burgundy);
+            border-radius: 5px;
+        }
+
+        .privacy-note {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 20px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c2c2c;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .benefit-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="Underpaid_No_More_Logo.png" alt="Underpaid No More">
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Section 1: Hero -->
+        <section class="hero">
+            <h1>THE WEALTH THEFT CALCULATOR</h1>
+            <p class="hero-subtitle">See Exactly What the Gender Wage Gap Cost You</p>
+            <p class="hero-text">For years, you gave everything — loyalty, skill, mentorship, heart — and somehow, the recognition never matched the effort.</p>
+            <p class="hero-text">You weren't imagining it. You were right.</p>
+            <a href="#calculator-form" class="cta-button">GET THE FREE CALCULATOR NOW</a>
+        </section>
+
+        <!-- Section 2: Validation -->
+        <section class="validation-section">
+            <h2 class="section-title">YOU WEREN'T IMAGINING IT</h2>
+            
+            <p class="validation-text"><strong>The Stories You Lived:</strong></p>
+            <ul class="story-list">
+                <li>You watched less-qualified colleagues earn more.</li>
+                <li>You were told "that's just the pay scale."</li>
+                <li>You were made to believe it was your fault</li>
+            </ul>
+            
+            <p class="validation-text"><strong>The Reality You Deserve To See:</strong></p>
+            
+            <p class="validation-text">
+                The wage gap is real, measurable, and systemic.<br>And this calculator proves it.
+            </p>
+            
+            <div class="quote-box">
+                "I knew I was underpaid. I just didn't know how much."
+            </div>
+            
+            <p class="validation-text">
+                Now you will.
+            </p>
+        </section>
+
+        <!-- Section 3: Benefits -->
+        <section class="benefits-section">
+            <h2 class="section-title">WHAT THE WEALTH THEFT CALCULATOR SHOWS YOU</h2>
+            
+            <div class="benefit-cards">
+                <div class="benefit-card">
+                    Calculate exactly how much the gender wage gap has cost you in total earnings
+                </div>
+                
+                <div class="benefit-card">
+                    Learn how underpayment compounds over decades — affecting super, retirement, and investments
+                </div>
+                
+                <div class="benefit-card">
+                    Discover what your income should look like today — based on fair, equitable standards
+                </div>
+                
+                <div class="benefit-card">
+                    Identify which path forward — negotiate, exit, or build your own — fits your stage right now
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Comparisons -->
+        <section class="comparison-section">
+            <h2 class="section-title">EQUAL SKILL - UNEQUAL PAY</h2>
+            
+            <p class="comparison-intro">
+                These aren't "different jobs." They're the same skills with different labels — and wildly different paychecks.
+            </p>
+            
+            <p class="comparison-intro" style="font-weight: bold; font-size: 1.4em;">
+                That's not a coincidence. It's systemic.
+            </p>
+            
+            <div class="comparison-cards">
+                <div class="comparison-card">
+                    <h3>Same Educational Investment. Different Returns</h3>
+                    <p>Teachers (4-year degree + ongoing training) earn $60 – 80 K. Engineers (same degree requirement) earn $90 – 130 K. Both solve complex problems. Both shape outcomes.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>Same Responsibility for Lives. Different Value</h3>
+                    <p>Nurses ($70 – 90 K) vs paramedics ($50 – 70 K). Both make split-second, life-or-death decisions. Both require years of training. One is majority-women. One is majority-men. Guess which pays more?</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>Same Expertise in Development. Different Recognition</h3>
+                    <p>Early-childhood teachers ($45 – 65 K) vs electricians ($65 – 90 K). Both require technical skill and years of training. Both are licensed professionals. Only one gets paid like it.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>Same Complexity. Different Label</h3>
+                    <p>Social workers ($55 – 75 K) vs corporate coordinators ($65 – 85 K). Same stakeholder management, same crisis handling, same documentation. Different label. Different pay.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>Same Tech Skills. Different Value Tag</h3>
+                    <p>Librarians ($60 – 75 K) vs IT support ($65 – 85 K). Each manages complex information systems; many librarians even hold postgraduate degrees.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3>People Management Pays Less Than Process Management</h3>
+                    <p>HR managers ($75 – 95 K) vs operations managers ($90 – 120 K). Same strategic planning, same stakeholder management, same organizational impact. Different label, different pay.</p>
+                </div>
+            </div>
+            
+            <a href="#calculator-form" class="cta-button">DOWNLOAD THE<br>WEALTH THEFT CALCULATOR</a>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section" id="calculator-form">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 40px;">GET YOUR FREE CALCULATOR NOW</h2>
+            
+            <div class="form-container">
+                <p style="color: var(--burgundy); font-size: 1.2em; margin-bottom: 20px;">
+                    <strong>Enter your details to access the calculator:</strong>
+                </p>
+                
+                <!-- Google Form - Update the action URL with your actual Google Form URL -->
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSfyEHxXy-vyIfuoSYgOqrwnM59VxPIR_OzLwS3soxDjfDZRFw/formResponse" method="POST" id="calculator-access-form">
+                    <div class="form-group">
+                        <label for="name">First Name:</label>
+                        <input type="text" id="name" name="entry.1544378962" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="entry.1103677854" required>
+                    </div>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%; margin-top: 20px;">
+                        GET MY FREE CALCULATOR
+                    </button>
+                </form>
+                
+                <p class="privacy-note">
+                    Your privacy matters. We'll never share your information.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p style="margin-bottom: 10px;"><strong>Underpaid No More</strong></p>
+        <p style="font-size: 0.9em;">© 2025 Underpaid No More. All Rights Reserved.</p>
+        <p style="font-size: 0.9em; margin-top: 20px;">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
