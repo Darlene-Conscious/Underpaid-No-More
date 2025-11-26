@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathway 3: Liberation Business Startup Kit</title>
+    <style>
+        :root {
+            --plum-dark: #8B2847;
+            --plum-medium: #A94665;
+            --plum-light: #F4E4EC;
+            --teal: #3D8B7B;
+            --text-dark: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 20px 20px;
+        }
+
+        /* Header/Logo */
+        .header {
+            text-align: center;
+            padding: 0 20px 0 20px;
+        }
+
+        .logo {
+            width: 375px;
+            height: 375px;
+            margin: 0 auto -80px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--plum-dark) 0%, #6B1F3A 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            margin-top: 0;
+        }
+
+        .hero h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-family: 'Georgia', serif;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        .hero-text {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            opacity: 0.9;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--teal);
+            color: white;
+            padding: 22px 55px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .cta-button:hover {
+            background: #2c6d5f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .secondary-link {
+            display: block;
+            margin-top: 15px;
+            color: white;
+            opacity: 0.8;
+            font-size: 1.1em;
+            text-decoration: none;
+        }
+
+        .secondary-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-family: 'Arial', sans-serif;
+            font-size: 2.5em;
+            color: var(--plum-dark);
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+
+        /* Why This Exists Section */
+        .why-section {
+            background: var(--plum-light);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .pain-list {
+            list-style: none;
+            margin: 30px auto;
+            max-width: 900px;
+        }
+
+        .pain-list li {
+            font-size: 1.25em;
+            padding: 20px 25px 20px 70px;
+            margin-bottom: 20px;
+            background: white;
+            border-left: 5px solid var(--plum-dark);
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .pain-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--plum-dark);
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .validation-text {
+            font-size: 1.3em;
+            text-align: center;
+            margin-top: 40px;
+            font-style: italic;
+            color: var(--plum-dark);
+            font-weight: 600;
+        }
+
+        /* What This Is Section */
+        .what-section {
+            background: white;
+            padding: 60px 40px;
+            margin-bottom: 60px;
+        }
+
+        .what-section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin: 30px auto;
+            max-width: 900px;
+        }
+
+        .benefits-list li {
+            font-size: 1.2em;
+            padding: 15px 0 15px 40px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .benefits-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--plum-dark);
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .reassurance-text {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 40px;
+            font-style: italic;
+            color: var(--plum-medium);
+            font-weight: 600;
+        }
+
+        /* Who This Is For Section */
+        .who-section {
+            background: var(--plum-light);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .column-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .column-box h3 {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.6em;
+            color: var(--plum-dark);
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .column-box ul {
+            list-style: none;
+        }
+
+        .column-box li {
+            font-size: 1.1em;
+            padding: 12px 0 12px 35px;
+            margin-bottom: 12px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .column-box.for-you li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .column-box.not-for-you li:before {
+            content: "×";
+            position: absolute;
+            left: 0;
+            color: #999;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        /* Inside Section */
+        .inside-section {
+            background: white;
+            padding: 60px 40px;
+            margin-bottom: 60px;
+        }
+
+        .module-list {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .module-item {
+            background: var(--plum-light);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            border-left: 5px solid var(--plum-dark);
+        }
+
+        .module-item h3 {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.5em;
+            color: var(--plum-dark);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .module-item p {
+            font-size: 1.15em;
+            line-height: 1.7;
+        }
+
+        .bonus-line {
+            margin-top: 40px;
+            padding: 25px;
+            background: var(--plum-dark);
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .bonus-cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* How This Works Section */
+        .how-section {
+            background: var(--plum-light);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .how-section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .steps-list {
+            list-style: none;
+            margin: 30px auto;
+            max-width: 900px;
+        }
+
+        .steps-list li {
+            font-size: 1.2em;
+            padding: 20px 25px 20px 80px;
+            margin-bottom: 20px;
+            background: white;
+            border-left: 5px solid var(--plum-dark);
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .steps-list li:before {
+            content: attr(data-number);
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--plum-dark);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1em;
+        }
+
+        .emphasis-text {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: var(--plum-dark);
+            font-weight: 600;
+        }
+
+        /* Story Section */
+        .story-section {
+            background: white;
+            padding: 60px 40px;
+            margin-bottom: 60px;
+        }
+
+        .story-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--plum-light);
+            padding: 50px;
+            border-radius: 20px;
+            border-left: 6px solid var(--plum-dark);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .story-box p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .story-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--plum-light);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 35px 40px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+        }
+
+        .faq-item h3 {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: var(--plum-dark);
+            font-weight: bold;
+        }
+
+        .faq-item p {
+            font-size: 1.15em;
+            line-height: 1.7;
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            background: white;
+            padding: 80px 40px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .final-cta-section h2 {
+            font-family: 'Georgia', serif;
+            font-size: 2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+            font-weight: normal;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta-section .subtext {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--plum-light);
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: var(--plum-dark);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+                letter-spacing: 4px;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+                letter-spacing: 2px;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .pain-list li,
+            .steps-list li {
+                font-size: 1.1em;
+                padding: 18px 20px 18px 60px;
+            }
+
+            .story-box {
+                padding: 35px;
+            }
+
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header/Logo -->
+    <div class="header">
+        <div class="logo">
+            <img src="Underpaid_No_More_Logo.png" alt="Underpaid No More Logo">
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>PATHWAY 3: LIBERATION BUSINESS STARTUP KIT</h1>
+            <p class="hero-subtitle">Build a business that frees you from systemic underpayment — and finally pays you what you're worth.</p>
+            <p class="hero-text">This is for women (and others) who are done relying on employers to decide their value and are ready to build an income stream they control.</p>
+            <a href="https://buy.stripe.com/4gMdR8b6B7XreHu3aLcjS04" class="cta-button">START YOUR LIBERATION BUSINESS — $197</a>
+            <a href="#inside" class="secondary-link">See what's inside first</a>
+        </section>
+
+        <!-- Why This Exists Section -->
+        <section class="why-section">
+            <h2 class="section-title">IF YOUR JOB WILL NEVER PAY YOU FAIRLY, THIS PATH IS FOR YOU</h2>
+            
+            <ul class="pain-list">
+                <li>You've watched your workload grow while your pay barely moved.</li>
+                <li>You've tried speaking up and were dismissed, minimised, or ignored.</li>
+                <li>You're exhausted from proving your worth to people who benefit from undervaluing you.</li>
+                <li>You want out — but you don't want to jump into chaos or panic.</li>
+                <li>You're starting to suspect the traditional workplace model will never truly value what you bring.</li>
+            </ul>
+
+            <p class="validation-text">This Pathway is for the woman who is ready to stop asking for permission and start building something that honours her value.</p>
+        </section>
+
+        <!-- What This Is Section -->
+        <section class="what-section">
+            <h2 class="section-title">A STEP-BY-STEP LIBERATION BLUEPRINT — NOT JUST A "BUSINESS IDEA GUIDE"</h2>
+            
+            <p>This is a 226-page, structured startup system, not a motivational pamphlet.</p>
+            
+            <p>It uses your existing skills and experience — no new degrees or certifications required.</p>
+            
+            <p>It focuses on ethical, sustainable business grounded in dignity, not hustle culture.</p>
+
+            <h3 style="font-size: 1.4em; color: var(--plum-dark); margin: 40px auto 20px; text-align: center; font-family: Arial, sans-serif;">This kit helps you:</h3>
+            
+            <ul class="benefits-list">
+                <li>Identify what you can offer that people will genuinely pay for</li>
+                <li>Design services or packages that protect your energy and boundaries</li>
+                <li>Set prices that reflect your worth (without guilt or apology)</li>
+                <li>Take your first practical steps to get clients</li>
+                <li>Build a financial safety net outside underpaid employment</li>
+            </ul>
+
+            <p class="reassurance-text">You don't need to "feel like an entrepreneur" to start. The structure will carry you.</p>
+        </section>
+
+        <!-- Who This Is For Section -->
+        <section class="who-section">
+            <h2 class="section-title">WHO PATHWAY 3 IS DESIGNED FOR</h2>
+            
+            <div class="two-column">
+                <div class="column-box for-you">
+                    <h3>This is for you if:</h3>
+                    <ul>
+                        <li>You're in a role that will never pay you fairly, no matter how hard you try.</li>
+                        <li>You want more control over your income and future.</li>
+                        <li>You're willing to take small, consistent steps even if you're scared.</li>
+                        <li>You care about doing meaningful, ethical work — not just "making money."</li>
+                        <li>You want a roadmap, not random advice.</li>
+                    </ul>
+                </div>
+                
+                <div class="column-box not-for-you">
+                    <h3>This is not for you if:</h3>
+                    <ul>
+                        <li>You want a "get rich quick" scheme.</li>
+                        <li>You're looking for high-pressure sales tactics or manipulative marketing.</li>
+                        <li>You're unwilling to reflect on your patterns and boundaries.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Inside Section -->
+        <section class="inside-section" id="inside">
+            <h2 class="section-title">WHAT'S INSIDE THE LIBERATION BUSINESS STARTUP KIT</h2>
+            
+            <div class="module-list">
+                <div class="module-item">
+                    <h3>Module 1: Foundations of Liberation</h3>
+                    <p>Clarify why you're leaving underpaid work and what you want your business to give you (emotionally, financially, practically).</p>
+                </div>
+
+                <div class="module-item">
+                    <h3>Module 2: Your Skills, Your Value</h3>
+                    <p>Identify your transferable skills and map them to real problems people will pay to solve.</p>
+                </div>
+
+                <div class="module-item">
+                    <h3>Module 3: Your First Offer</h3>
+                    <p>Design ethically structured services or packages that don't burn you out.</p>
+                </div>
+
+                <div class="module-item">
+                    <h3>Module 4: Pricing for Dignity</h3>
+                    <p>Decide your pricing based on value and sustainability, not shame or scarcity.</p>
+                </div>
+
+                <div class="module-item">
+                    <h3>Module 5: Gentle Client Attraction</h3>
+                    <p>Simple ways to find and speak to your first clients without fake urgency, scripts or aggressive tactics.</p>
+                </div>
+
+                <div class="module-item">
+                    <h3>Module 6: Your Business Backbone</h3>
+                    <p>Light-touch systems and structures (scheduling, boundaries, payment, delivery) so your business supports you.</p>
+                </div>
+
+                <div class="module-item">
+                    <h3>Module 7: Money Trauma & Identity</h3>
+                    <p>Work gently with the emotional patterns that show up when you start charging what you're worth.</p>
+                </div>
+
+                <div class="module-item">
+                    <h3>Module 8: Templates, Scripts & Worksheets</h3>
+                    <p>Done-for-you tools you can copy, adapt, and implement without starting from scratch.</p>
+                </div>
+
+                <div class="bonus-line">
+                    Plus: reflection exercises, planning pages, and implementation tools you can reuse as your business grows.
+                </div>
+
+                <div class="bonus-cta">
+                    <a href="https://buy.stripe.com/4gMdR8b6B7XreHu3aLcjS04" class="cta-button">Get These Tools</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How This Works Section -->
+        <section class="how-section">
+            <h2 class="section-title">HOW YOU'LL USE THIS KIT</h2>
+            
+            <p>This is self-paced. You can work through it while still employed. It's broken into small, doable steps.</p>
+            
+            <ul class="steps-list">
+                <li data-number="1">Download the guide</li>
+                <li data-number="2">Work through one section at a time</li>
+                <li data-number="3">Implement tiny actions as you go</li>
+                <li data-number="4">Use the templates and scripts instead of writing everything from scratch</li>
+                <li data-number="5">Build your foundation quietly and steadily until you're ready for a transition</li>
+            </ul>
+
+            <p class="emphasis-text">No pressure, no "all-or-nothing leap."</p>
+        </section>
+
+        <!-- My Story Section -->
+        <section class="story-section">
+            <h2 class="section-title">WHY I CREATED THIS PATHWAY</h2>
+            
+            <div class="story-box">
+                <p>I discovered my own Wealth Theft at 60 — living in a caravan, nearly destitute, with $1.5 million stolen from me over my working life.</p>
+                
+                <p>This kit is for women who don't want to wait that long to reclaim their autonomy.</p>
+                
+                <p style="font-style: italic; color: var(--plum-dark);">I don't want anyone else to spend decades doubting themselves when the system was the problem.</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>Do I have to leave my job right away?</h3>
+                <p>No. This kit is designed so you can build your business foundation while still employed. Many women start this work quietly on the side until they're ready to transition.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What if I don't know what kind of business I want yet?</h3>
+                <p>That's exactly what Module 2 helps you figure out. We map your existing skills to problems people will pay to solve — you don't need to come in with a business idea already formed.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do I need tech skills or social media?</h3>
+                <p>No. This system focuses on simple, practical methods to find your first clients without needing advanced tech or a large social media following.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Is this only for women?</h3>
+                <p>This kit is centred on women's experiences of systemic underpayment, but it's also for anyone in undervalued roles — including men in feminine-coded work — and for partners who want to understand and support someone who's been impacted.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How much time will this take?</h3>
+                <p>It's broken into small, manageable steps. You can move through it at your own pace — whether that's a few hours a week or more intensive focus. The key is consistent progress, not speed.</p>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta-section" id="purchase">
+            <h2>You deserve income that reflects your value.<br>
+            You deserve work that doesn't drain you.<br>
+            You deserve a future that isn't decided by a system that never saw you clearly.</h2>
+            
+            <p style="font-size: 1.3em; margin: 30px 0; font-style: italic; color: var(--plum-medium);">Pathway 3 gives you the roadmap to build it.</p>
+            
+            <a href="https://buy.stripe.com/4gMdR8b6B7XreHu3aLcjS04" class="cta-button">START YOUR LIBERATION BUSINESS — $197</a>
+            
+            <p class="subtext">Instant digital access · 226-page guide · Templates & tools included</p>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p style="margin-bottom: 10px;"><strong>UNDERPAID NO MORE</strong></p>
+        <p style="font-size: 0.9em;">© 2025 Underpaid No More. All Rights Reserved.</p>
+        <p style="font-size: 0.9em; margin-top: 20px;">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms</a> | 
+            <a href="#">Contact</a>
+        </p>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
