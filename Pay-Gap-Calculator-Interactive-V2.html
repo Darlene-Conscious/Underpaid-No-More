@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Earn an Extra $200/Week | Pay Gap Calculator</title>
+
+    <!-- Open Graph (Facebook, WhatsApp, iMessage, LinkedIn, Discord) -->
+    <meta property="og:title" content="Earn an Extra $200/Week Without Working More" />
+    <meta property="og:description" content="Use this free calculator to discover how much you're being underpaid — and what your work is really worth." />
+    <meta property="og:image" content="https://darlene-conscious.github.io/Underpaid-No-More/Calculator-Link-Image-V2.png?v=3" />
+    <meta property="og:image:secure_url" content="https://darlene-conscious.github.io/Underpaid-No-More/Calculator-Link-Image-V2.png?v=3" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://darlene-conscious.github.io/Underpaid-No-More/Wealth_Theft_Calculator_Interactive.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Earn an Extra $200/Week Without Working More">
+    <meta name="twitter:description" content="Use this free calculator to discover how much you're being underpaid — and what your work is really worth.">
+    <meta name="twitter:image" content="https://darlene-conscious.github.io/Underpaid-No-More/Calculator-Link-Image-V2.png?v=3">
+
+    <style>
+        :root {
+            --burgundy: #8B3A5B;
+            --burgundy-dark: #6B2C4A;
+            --teal: #3D8B7B;
+            --pink: #F4E4EC;
+            --cream: #FFF9F5;
+            --text-dark: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--cream);
+            padding-bottom: 50px;
+        }
+
+        .header-box {
+            background: var(--teal);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .header-box img {
+            max-width: 250px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -30px auto 40px auto;
+            padding: 0 20px;
+        }
+
+        .calculator-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(139, 58, 91, 0.1);
+            padding: 30px 25px;
+            margin-bottom: 20px;
+        }
+
+        .calculator-title {
+            font-size: 1.8em;
+            color: var(--burgundy);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .calculator-subtitle {
+            font-size: 1em;
+            color: #666;
+            text-align: center;
+            margin-bottom: 25px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .section-header {
+            background: var(--burgundy);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 20px 0 15px 0;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            color: white;
+            font-size: 1.1em;
+            margin: 0;
+        }
+
+        .section-header.results {
+            background: var(--teal);
+        }
+
+        .section-header.results h2 {
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.95em;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 0.95em;
+            font-family: 'Georgia', serif;
+            border: 2px solid var(--burgundy);
+            border-radius: 6px;
+            color: #0000FF;
+        }
+
+        .form-group select {
+            background: white;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B3A5B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px;
+            padding-right: 35px;
+        }
+
+        .form-group select option {
+            padding: 8px;
+            font-size: 0.9em;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 3px rgba(61, 139, 123, 0.1);
+        }
+
+        .helper-text {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .info-box {
+            background: var(--pink);
+            border: 2px solid var(--burgundy);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            min-height: 60px;
+        }
+
+        .info-box h4 {
+            color: var(--burgundy);
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .info-box p {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        .info-box .comparison {
+            font-weight: bold;
+            color: var(--burgundy-dark);
+        }
+
+        .info-box.empty {
+            color: #999;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .comparison-cards-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .comparison-card {
+            background: white;
+            border: 3px solid var(--burgundy);
+            border-radius: 15px;
+            padding: 25px;
+            min-height: 250px;
+        }
+
+        .comparison-card.your-role {
+            border-color: var(--burgundy);
+            background: var(--pink);
+        }
+
+        .comparison-card.comparative-role {
+            border-color: var(--teal);
+            background: #E8F5F3;
+        }
+
+        .comparison-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .comparison-card.your-role h3 {
+            color: var(--burgundy);
+        }
+
+        .comparison-card.comparative-role h3 {
+            color: var(--teal);
+        }
+
+        .comparison-data-row {
+            margin: 15px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .comparison-data-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .comparison-value {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+
+        .comparison-value.placeholder {
+            color: #999;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        .result-box {
+            background: var(--cream);
+            border: 3px solid var(--burgundy);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .result-label {
+            font-size: 1.2em;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .result-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--burgundy);
+            margin: 10px 0;
+        }
+
+        .result-value.big {
+            font-size: 3em;
+            background: var(--pink);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .result-helper {
+            font-size: 0.95em;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* New Results Card Layout */
+        .results-card {
+            background: white;
+            border: 2px solid var(--teal);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .results-card-header {
+            background: var(--teal);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: -20px -20px 15px -20px;
+            text-align: center;
+        }
+
+        .results-card-header h2 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .result-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+        }
+
+        .result-row.total {
+            background: var(--pink);
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border-bottom: none;
+        }
+
+        .result-descriptor {
+            font-size: 0.95em;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .result-descriptor .sub-text {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            display: block;
+            margin-top: 3px;
+        }
+
+        .result-amount {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--burgundy);
+            text-align: right;
+        }
+
+        .result-row.total .result-amount {
+            font-size: 1.5em;
+        }
+
+        .checkbox-section {
+            background: white;
+            border: 2px solid var(--pink);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .checkbox-section h3 {
+            color: var(--burgundy);
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: var(--cream);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .checkbox-item label {
+            cursor: pointer;
+            font-size: 1.05em;
+            margin: 0;
+        }
+
+        .checkbox-count {
+            background: var(--pink);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .checkbox-count.warning {
+            background: var(--burgundy);
+            color: white;
+        }
+
+        .checkbox-count p {
+            font-size: 1.15em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .next-steps {
+            background: white;
+            border: 3px solid var(--burgundy);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .next-steps h3 {
+            color: var(--burgundy);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .next-steps p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .cta-button {
+            display: block;
+            background: var(--burgundy);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--burgundy-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 58, 91, 0.3);
+        }
+
+        .resource-box {
+            background: var(--cream);
+            border: 2px solid var(--teal);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .resource-box h4 {
+            color: var(--teal);
+            margin-bottom: 15px;
+        }
+
+        .resource-box ul {
+            margin-left: 25px;
+        }
+
+        .resource-box li {
+            margin-bottom: 8px;
+        }
+
+        .resource-box a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        .resource-box a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .calculator-card {
+                padding: 20px 15px;
+            }
+
+            .calculator-title {
+                font-size: 1.4em;
+            }
+
+            .calculator-subtitle {
+                font-size: 0.9em;
+            }
+
+            .comparison-cards-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* Mobile fixes for large numbers */
+            .result-row {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .result-amount {
+                font-size: 1.2em;
+                text-align: left;
+                word-break: break-word;
+            }
+
+            .result-row.total .result-amount {
+                font-size: 1.4em;
+            }
+
+            .result-descriptor {
+                font-size: 0.9em;
+            }
+
+            .comparison-value {
+                font-size: 1em;
+                word-break: break-word;
+            }
+
+            .results-card {
+                padding: 15px;
+            }
+
+            .results-card-header {
+                margin: -15px -15px 12px -15px;
+                padding: 8px 12px;
+            }
+
+            .results-card-header h2 {
+                font-size: 1em;
+            }
+
+            .form-group select,
+            .form-group input {
+                font-size: 0.9em;
+            }
+
+            .info-box {
+                font-size: 0.9em;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <img src="Underpaid No More_Logo.png" alt="Underpaid No More Logo">
+    </div>
+
+    <div class="container">
+        <div class="calculator-card">
+            <h1 class="calculator-title">Earn an Extra $200/Week Without Working More</h1>
+            <p class="calculator-subtitle"><strong>Some jobs pay less just because of what they're called—not what you actually do.</strong><br>Use this calculator to see what your work is actually worth.</p>
+
+    <!-- Google Form: Name & Email Capture -->
+    <div class="results-card">
+        <div class="results-card-header">
+            <h2>STEP 1: ENTER YOUR DETAILS</h2>
+        </div>
+        <p style="margin-bottom: 15px; text-align: center;">
+            Pop your name and email in below so we can support you with resources tailored to your situation.
+        </p>
+       <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfyEHxXy-vyIfuoSYgOqrwnM59VxPIR_OzLwS3soxDjfDZRFw/viewform?embedded=true"
+    width="100%" 
+    height="350" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0">
+    Loading…
+</iframe>
+
+    </div>
+
+            <!-- Section A: Your Details -->
+            <div class="section-header">
+                <h2>YOUR CURRENT SITUATION</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="feminineRole">Select Your Role (if listed):</label>
+                <select id="feminineRole" onchange="handleRoleSelection()">
+                    <option value="">-- Typically Undervalued Roles --</option>
+                </select>
+                <p class="helper-text">If your role is listed, select it for automatic wage comparison.</p>
+                <p class="helper-text" style="margin-top: 8px;">
+    If your role isn't listed,
+    <a href="mailto:darlene.underpaidnomore@gmail.com"
+       style="color: var(--burgundy); text-decoration: underline; font-weight: bold;">
+       email
+    </a>
+    us and we will personally analyse your role for you.
+</p>
+</div>
+
+            <div class="form-group">
+                <label for="yearsWorked">How long have you been in this role/field? (years)</label>
+                <input type="number" id="yearsWorked" min="0" step="0.5" placeholder="e.g., 5.5">
+                <p class="helper-text">Include all years you've been working in this field</p>
+            </div>
+
+            <div class="form-group">
+                <label for="currentAge">Your Current Age:</label>
+                <input type="number" id="currentAge" min="18" max="100" step="1" placeholder="e.g., 35">
+                <p class="helper-text">Used to calculate impact until retirement at age 67</p>
+            </div>
+
+            <div class="form-group">
+                <label for="currentSalary">Your Current Annual Salary:</label>
+                <input type="number" id="currentSalary" min="0" step="1000" placeholder="e.g., 55000">
+                <p class="helper-text">Before tax, your gross annual salary</p>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Additional Notes (Optional):</label>
+                <input type="text" id="notes" placeholder="e.g., Role has expanded, took on management duties, etc.">
+                <p class="helper-text">Any context about your role or responsibilities</p>
+            </div>
+
+            <div class="info-box" id="roleComparisonBox">
+                <p class="placeholder">Select a role above to see wage gap analysis</p>
+            </div>
+
+            <!-- Section B: Comparison (Always Visible) -->
+            <div class="section-header">
+                <h2>SIDE-BY-SIDE COMPARISON</h2>
+            </div>
+
+            <div class="comparison-cards-container">
+                <div class="comparison-card your-role">
+                    <h3>Your Current Role</h3>
+                    <div class="comparison-data-row">
+                        <div class="comparison-label">Role Title:</div>
+                        <div class="comparison-value placeholder" id="yourRoleTitle">Select role above</div>
+                    </div>
+                    <div class="comparison-data-row">
+                        <div class="comparison-label">Your Annual Salary:</div>
+                        <div class="comparison-value placeholder" id="yourAnnualSalary">Enter salary above</div>
+                    </div>
+                    <div class="comparison-data-row">
+                        <div class="comparison-label">Your Hourly Rate:</div>
+                        <div class="comparison-value placeholder" id="yourHourlyRate">-</div>
+                    </div>
+                </div>
+
+                <div class="comparison-card comparative-role">
+                    <h3>Same Work, Different Title</h3>
+                    <div class="comparison-data-row">
+                        <div class="comparison-label">Comparative Role Title:</div>
+                        <div class="comparison-value placeholder" id="compRoleTitle">Select role above</div>
+                    </div>
+                    <div class="comparison-data-row">
+                        <div class="comparison-label">Industry Standard Annual:</div>
+                        <div class="comparison-value placeholder" id="compAnnualSalary">-</div>
+                    </div>
+                    <div class="comparison-data-row">
+                        <div class="comparison-label">Industry Standard Hourly:</div>
+                        <div class="comparison-value placeholder" id="compHourlyRate">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden field for calculations -->
+            <input type="hidden" id="marketSalary" value="0">
+
+            <!-- Section C: Results -->
+            <div class="results-card">
+                <div class="results-card-header">
+                    <h2>YOUR PAY GAP</h2>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        You Should Have Been Earning an Extra:
+                        <span class="sub-text">Per year with proper compensation</span>
+                    </div>
+                    <div class="result-amount" id="annualUnderpayment">$0</div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        Years at This Pay Level:
+                        <span class="sub-text">From your input above</span>
+                    </div>
+                    <div class="result-amount" id="yearsUnderpaid">0</div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        Total You Have Lost So Far:
+                        <span class="sub-text">Base calculation over your career</span>
+                    </div>
+                    <div class="result-amount" id="lifetimeWealth">$0</div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        Interest You Could Have Earned on This Money (at 5%):
+                        <span class="sub-text">Interest earnings only (on top of your lost wages)</span>
+                    </div>
+                    <div class="result-amount" id="compoundInterest">$0</div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        Extra Superannuation You Could Have (@ 10.5%):
+                        <span class="sub-text">Additional retirement savings you're missing</span>
+                    </div>
+                    <div class="result-amount" id="superShortfall">$0</div>
+                </div>
+
+                <div class="result-row total">
+                    <div class="result-descriptor">
+                        <strong>TOTAL LOST (Wages + Interest + Super):</strong>
+                        <span class="sub-text">Combined total of all three amounts above</span>
+                    </div>
+                    <div class="result-amount" id="totalLifetimeWealth">$0</div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        If You Continue for Another 10 Years:
+                        <span class="sub-text">Projected total opportunity cost over the next decade</span>
+                    </div>
+                    <div class="result-amount" id="tenYearProjection">$0</div>
+                </div>
+
+                <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 2px solid var(--teal);">
+                    <a href="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html" style="color: var(--teal); font-size: 1.15em; font-weight: bold; text-decoration: none;">
+                        → Click here to see what you can do about it
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lifetime to Retirement Section -->
+            <div class="results-card">
+                <div class="results-card-header">
+                    <h2>LIFETIME LOST TO RETIREMENT</h2>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        Years Until Retirement (Age 67):
+                        <span class="sub-text">Based on your current age</span>
+                    </div>
+                    <div class="result-amount" id="yearsToRetirement">-</div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        Total Lost Wages by Retirement:
+                        <span class="sub-text">Lost annual wages over remaining career</span>
+                    </div>
+                    <div class="result-amount" id="lifetimeWages">$0</div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        Total Interest Earnings Lost by Retirement:
+                        <span class="sub-text">5% compound interest to retirement</span>
+                    </div>
+                    <div class="result-amount" id="lifetimeInterest">$0</div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-descriptor">
+                        Total Superannuation Lost by Retirement:
+                        <span class="sub-text">10.5% super contributions to retirement</span>
+                    </div>
+                    <div class="result-amount" id="lifetimeSuper">$0</div>
+                </div>
+
+                <div class="result-row total">
+                    <div class="result-descriptor">
+                        <strong>LIFETIME TOTAL LOST BY RETIREMENT:</strong>
+                        <span class="sub-text">If the pay gap continues until you retire</span>
+                    </div>
+                    <div class="result-amount" id="lifetimeTotal">$0</div>
+                </div>
+
+                <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 2px solid var(--teal);">
+                    <a href="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html" style="color: var(--teal); font-size: 1.15em; font-weight: bold; text-decoration: none;">
+                        → Click here to see what you can do about it
+                    </a>
+                </div>
+            </div>
+
+            <!-- Important Note Card -->
+            <div class="results-card" style="border-color: var(--burgundy); background: var(--pink);">
+                <div class="results-card-header" style="background: var(--burgundy);">
+                    <h2>⚠️ IMPORTANT: YOUR REAL GAP MAY BE EVEN HIGHER</h2>
+                </div>
+
+                <div style="padding: 10px 0;">
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 15px;">
+                        <strong>This calculator only compares job titles.</strong> But here's the reality: many people are doing WAY more than their job description shows.
+                    </p>
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 15px;">
+                        If you're managing projects, training staff, making strategic decisions, or handling responsibilities that go beyond your official role—<strong>your actual pay gap could be significantly larger</strong> than what's shown here.
+                    </p>
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 20px;">
+                        You're not just underpaid for your title. You might be doing work that should command an even higher salary than the "equivalent role" we've compared.
+                    </p>
+                    <div style="text-align: center; padding-top: 15px; border-top: 2px solid var(--burgundy);">
+                        <a href="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html" style="color: var(--burgundy); font-size: 1.15em; font-weight: bold; text-decoration: none;">
+                            → Click here to see what you can do about it
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Next Steps -->
+        <div class="next-steps">
+            <h3>WHAT'S HAPPENING NOW</h3>
+            <p>You're probably feeling a lot right now — shock, relief, anger, or confusion. Whatever came up for you is completely valid.</p>
+            <p><strong>These numbers aren't just calculations. They're the first clear evidence that you are being underpaid.</strong></p>
+            <p>Now that you've seen your numbers, the next step is understanding what they actually mean for your life, your identity, and your financial future—especially if you're doing more than your job title suggests.</p>
+            <p>If you want clarity on what your expanded responsibilities are actually worth and a guided plan for what to do next, the guide below was created to walk you through exactly that.</p>
+            
+            <a href="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html" class="cta-button">
+                UNDERSTAND YOUR NUMBERS & EXPLORE NEXT STEPS
+            </a>
+        </div>
+
+        <!-- Blog Card -->
+        <div class="results-card" style="border-color: var(--teal);">
+            <div class="results-card-header" style="background: var(--teal);">
+                <h2>WANT TO LEARN MORE?</h2>
+            </div>
+            
+            <div style="padding: 10px 0; text-align: center;">
+                <p style="margin-bottom: 15px;">Dive deeper into the systemic pay gap, understand the issues at play, and discover strategies for advocating for fair compensation.</p>
+                <p style="margin-bottom: 20px;">Our blog features insights, research, and practical advice to help you navigate your career and close your pay gap.</p>
+                
+                <a href="https://darlene-conscious.github.io/UNM-Blogs/UNM-Blog-Landing-Page.html" class="cta-button" style="background: var(--teal);">
+                    READ THE BLOG
+                </a>
+            </div>
+        </div>
+
+        <!-- Research Resources -->
+        <div class="results-card" style="border-color: var(--teal);">
+            <div class="results-card-header" style="background: var(--teal);">
+                <h2>WANT TO RESEARCH THIS YOURSELF?</h2>
+            </div>
+            
+            <div style="padding: 10px 0;">
+                <p style="margin-bottom: 15px;"><strong>Disclaimer:</strong> The salary data auto-populated from the role selection comes from wage gap research conducted in 2025. We strongly encourage you to verify and research current market rates for your specific role and location.</p>
+                <p style="margin-bottom: 10px;">Use these Australian salary comparison tools to find the most accurate data:</p>
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li style="margin-bottom: 8px;"><a href="https://www.payscale.com/research/AU/Country=Australia/Salary" target="_blank" style="color: var(--teal); text-decoration: none;">PayScale Australia</a></li>
+                    <li style="margin-bottom: 8px;"><a href="https://www.seek.com.au/career-advice/role/salary-calculator" target="_blank" style="color: var(--teal); text-decoration: none;">SEEK Salary Calculator</a></li>
+                    <li style="margin-bottom: 8px;"><a href="https://www.fairwork.gov.au/pay-and-wages/minimum-wages" target="_blank" style="color: var(--teal); text-decoration: none;">Fair Work Awards & Pay Guides</a></li>
+                    <li style="margin-bottom: 8px;"><a href="https://www.hays.com.au/salary-guide" target="_blank" style="color: var(--teal); text-decoration: none;">Hays Salary Guide</a></li>
+                    <li style="margin-bottom: 8px;"><a href="https://www.roberthalf.com.au/salary-guide" target="_blank" style="color: var(--teal); text-decoration: none;">Robert Half Salary Guide</a></li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold; color: var(--burgundy); margin-bottom: 8px;">IMPORTANT: Search your ACTUAL job duties, not your title</p>
+                <p style="font-size: 0.9em; color: #666; font-style: italic;">If your title is "Office Manager" but you manage $2M budgets and 8 staff, search "Operations Manager" salaries instead.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: var(--burgundy); color: white; padding: 40px 20px; margin-top: 60px;">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h3 style="font-size: 1.8em; margin-bottom: 15px;">Underpaid No More</h3>
+            <p style="font-size: 1.1em; margin-bottom: 25px; line-height: 1.6;">
+                Helping people understand their worth and close the pay gap.
+            </p>
+            
+            <div style="margin-bottom: 20px;">
+                <p style="font-size: 1em; margin-bottom: 10px;">
+                    <strong>Contact Us:</strong>
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Email: 
+<a href="mailto:darlene.underpaidnomore@gmail.com" 
+   style="color: var(--pink); text-decoration: none;">
+   darlene.underpaidnomore@gmail.com
+</a>
+</p>
+
+                
+                <p style="font-size: 1em; margin-bottom: 10px;">
+                    <strong>Resources:</strong>
+                </p>
+                <p style="margin-bottom: 8px;">
+                    <a href="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html" style="color: var(--pink); text-decoration: none; margin-right: 20px;">📚 Resource Hub</a>
+                    <a href="https://darlene-conscious.github.io/UNM-Blogs/UNM-Blog-Landing-Page.html" style="color: var(--pink); text-decoration: none;">✍️ Blog</a>
+                </p>
+                
+                <p style="font-size: 1em; margin-bottom: 10px; margin-top: 20px;">
+                    <strong>Follow Us:</strong>
+                </p>
+                <p style="margin-bottom: 8px;">
+                    <a href="https://www.instagram.com/underpaid.no.more?igsh=MXFqN3E5M2NkazRzag==" target="_blank" style="color: var(--pink); text-decoration: none; margin-right: 20px;">📷 Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61583650460751" target="_blank" style="color: var(--pink); text-decoration: none;">👍 Facebook</a>
+                </p>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.3); padding-top: 20px; margin-top: 30px;">
+                <p style="font-size: 0.9em; opacity: 0.8;">
+                    © 2025 Underpaid No More. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Wage gap data
+        const wageGapData = [
+            {sector: "Education & Childcare", femRole: "Early Childhood Educator (Cert III)", femHourly: 27.14, mascRole: "Technical Training Specialist", mascHourly: 38.00},
+            {sector: "Education & Childcare", femRole: "Early Childhood Educator (Diploma)", femHourly: 32.00, mascRole: "Operations Coordinator", mascHourly: 43.00},
+            {sector: "Education & Childcare", femRole: "Early Childhood Teacher (Bachelor)", femHourly: 35.33, mascRole: "Technical Project Manager", mascHourly: 50.00},
+            {sector: "Education & Childcare", femRole: "Teacher's Aide/Assistant", femHourly: 28.50, mascRole: "Educational Support Specialist", mascHourly: 42.00},
+            {sector: "Education & Childcare", femRole: "Special Needs Support Worker", femHourly: 30.00, mascRole: "Behavioral Intervention Specialist", mascHourly: 45.00},
+            {sector: "Education & Childcare", femRole: "After School Care Coordinator", femHourly: 29.00, mascRole: "Youth Program Director", mascHourly: 42.00},
+            {sector: "Healthcare & Caring", femRole: "Personal Care Assistant", femHourly: 28.00, mascRole: "Health Services Technician", mascHourly: 42.00},
+            {sector: "Healthcare & Caring", femRole: "Aged Care Worker (Cert III)", femHourly: 30.00, mascRole: "Healthcare Support Specialist", mascHourly: 44.00},
+            {sector: "Healthcare & Caring", femRole: "Enrolled Nurse", femHourly: 32.50, mascRole: "Clinical Support Technician", mascHourly: 46.00},
+            {sector: "Healthcare & Caring", femRole: "Disability Support Worker", femHourly: 31.00, mascRole: "Rehabilitation Services Coordinator", mascHourly: 45.00},
+            {sector: "Healthcare & Caring", femRole: "Dental Assistant", femHourly: 27.50, mascRole: "Dental Operations Technician", mascHourly: 40.00},
+            {sector: "Healthcare & Caring", femRole: "Nursing Home Activities Coordinator", femHourly: 29.00, mascRole: "Resident Experience Manager", mascHourly: 42.00},
+            {sector: "Healthcare & Caring", femRole: "Community Care Worker", femHourly: 30.50, mascRole: "Community Services Specialist", mascHourly: 44.00},
+            {sector: "Healthcare & Caring", femRole: "Mental Health Support Worker", femHourly: 33.00, mascRole: "Behavioral Health Technician", mascHourly: 48.00},
+            {sector: "Administration & Office", femRole: "Receptionist/Front Desk", femHourly: 25.00, mascRole: "Client Experience Manager", mascHourly: 36.00},
+            {sector: "Administration & Office", femRole: "Administrative Assistant", femHourly: 28.00, mascRole: "Operations Coordinator", mascHourly: 40.00},
+            {sector: "Administration & Office", femRole: "Office Manager", femHourly: 35.00, mascRole: "Business Operations Manager", mascHourly: 52.00},
+            {sector: "Administration & Office", femRole: "Executive Assistant", femHourly: 38.00, mascRole: "Executive Operations Manager", mascHourly: 55.00},
+            {sector: "Administration & Office", femRole: "Data Entry Clerk", femHourly: 24.00, mascRole: "Information Systems Technician", mascHourly: 35.00},
+            {sector: "Administration & Office", femRole: "Records Coordinator", femHourly: 27.00, mascRole: "Information Management Specialist", mascHourly: 39.00},
+            {sector: "Administration & Office", femRole: "Office Support Officer", femHourly: 26.50, mascRole: "Business Services Coordinator", mascHourly: 38.00},
+            {sector: "Human Resources", femRole: "HR Coordinator", femHourly: 32.00, mascRole: "Talent Acquisition Strategist", mascHourly: 47.00},
+            {sector: "Human Resources", femRole: "HR Assistant", femHourly: 28.00, mascRole: "People Operations Specialist", mascHourly: 41.00},
+            {sector: "Human Resources", femRole: "Recruitment Coordinator", femHourly: 30.00, mascRole: "Talent Sourcing Manager", mascHourly: 45.00},
+            {sector: "Human Resources", femRole: "Payroll Officer", femHourly: 32.00, mascRole: "Compensation Systems Analyst", mascHourly: 48.00},
+            {sector: "Human Resources", femRole: "Training Coordinator", femHourly: 31.00, mascRole: "Workforce Development Specialist", mascHourly: 46.00},
+            {sector: "Customer Service & Retail", femRole: "Customer Service Representative", femHourly: 26.00, mascRole: "Client Relations Specialist", mascHourly: 38.00},
+            {sector: "Customer Service & Retail", femRole: "Call Centre Operator", femHourly: 25.00, mascRole: "Customer Solutions Technician", mascHourly: 37.00},
+            {sector: "Customer Service & Retail", femRole: "Retail Sales Assistant", femHourly: 24.00, mascRole: "Sales Associate", mascHourly: 33.00},
+            {sector: "Customer Service & Retail", femRole: "Store Coordinator", femHourly: 28.00, mascRole: "Retail Operations Manager", mascHourly: 42.00},
+            {sector: "Customer Service & Retail", femRole: "Beauty Therapist", femHourly: 27.00, mascRole: "Aesthetic Services Technician", mascHourly: 40.00},
+            {sector: "Hospitality & Food Service", femRole: "Waitress/Server", femHourly: 24.00, mascRole: "Food Service Coordinator", mascHourly: 32.00},
+            {sector: "Hospitality & Food Service", femRole: "Barista", femHourly: 25.00, mascRole: "Beverage Operations Specialist", mascHourly: 34.00},
+            {sector: "Hospitality & Food Service", femRole: "Kitchen Hand", femHourly: 23.00, mascRole: "Culinary Support Technician", mascHourly: 31.00},
+            {sector: "Hospitality & Food Service", femRole: "Housekeeper", femHourly: 26.00, mascRole: "Facility Services Technician", mascHourly: 38.00},
+            {sector: "Hospitality & Food Service", femRole: "Hotel Front Desk", femHourly: 27.00, mascRole: "Guest Experience Manager", mascHourly: 39.00},
+            {sector: "Social Services & Community", femRole: "Social Worker", femHourly: 40.00, mascRole: "Case Management Specialist", mascHourly: 56.00},
+            {sector: "Social Services & Community", femRole: "Youth Worker", femHourly: 32.00, mascRole: "Youth Development Coordinator", mascHourly: 46.00},
+            {sector: "Social Services & Community", femRole: "Family Support Worker", femHourly: 33.00, mascRole: "Family Services Coordinator", mascHourly: 48.00},
+            {sector: "Social Services & Community", femRole: "Crisis Support Worker", femHourly: 34.00, mascRole: "Emergency Response Specialist", mascHourly: 50.00},
+            {sector: "Social Services & Community", femRole: "Community Outreach Worker", femHourly: 31.00, mascRole: "Community Engagement Strategist", mascHourly: 45.00},
+            {sector: "Creative & Marketing", femRole: "Marketing Coordinator", femHourly: 33.00, mascRole: "Marketing Operations Manager", mascHourly: 48.00},
+            {sector: "Creative & Marketing", femRole: "Social Media Coordinator", femHourly: 30.00, mascRole: "Digital Engagement Strategist", mascHourly: 45.00},
+            {sector: "Creative & Marketing", femRole: "Content Writer", femHourly: 32.00, mascRole: "Content Strategist", mascHourly: 48.00},
+            {sector: "Creative & Marketing", femRole: "Graphic Designer", femHourly: 35.00, mascRole: "Visual Communications Specialist", mascHourly: 50.00},
+            {sector: "Creative & Marketing", femRole: "Events Coordinator", femHourly: 31.00, mascRole: "Event Operations Manager", mascHourly: 46.00},
+            {sector: "Library & Information", femRole: "Library Assistant", femHourly: 28.00, mascRole: "Information Services Technician", mascHourly: 40.00},
+            {sector: "Library & Information", femRole: "Librarian", femHourly: 38.00, mascRole: "Information Resource Manager", mascHourly: 54.00},
+            {sector: "Library & Information", femRole: "Archives Assistant", femHourly: 29.00, mascRole: "Records Management Specialist", mascHourly: 42.00},
+            {sector: "Cleaning & Support Services", femRole: "Cleaner", femHourly: 25.00, mascRole: "Facility Maintenance Technician", mascHourly: 37.00},
+            {sector: "Cleaning & Support Services", femRole: "Laundry Attendant", femHourly: 24.00, mascRole: "Textile Services Operator", mascHourly: 35.00},
+            {sector: "Cleaning & Support Services", femRole: "Domestic Assistant", femHourly: 24.50, mascRole: "Household Services Coordinator", mascHourly: 36.00},
+        ];
+
+        function populateRoleDropdown() {
+            const select = document.getElementById('feminineRole');
+            
+            wageGapData.forEach((role, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                // Include sector name in option text for clarity
+                option.textContent = `${role.sector}: ${role.femRole}`;
+                select.appendChild(option);
+            });
+        }
+
+        function handleRoleSelection() {
+            const roleIndex = document.getElementById('feminineRole').value;
+            const infoBox = document.getElementById('roleComparisonBox');
+            
+            if (roleIndex === '') {
+                infoBox.innerHTML = '<p class="placeholder">Select a role above to see wage gap analysis</p>';
+                document.getElementById('yourRoleTitle').textContent = 'Select role above';
+                document.getElementById('yourRoleTitle').className = 'comparison-value placeholder';
+                document.getElementById('compRoleTitle').textContent = 'Select role above';
+                document.getElementById('compRoleTitle').className = 'comparison-value placeholder';
+                document.getElementById('compAnnualSalary').textContent = '-';
+                document.getElementById('compAnnualSalary').className = 'comparison-value placeholder';
+                document.getElementById('compHourlyRate').textContent = '-';
+                document.getElementById('compHourlyRate').className = 'comparison-value placeholder';
+                return;
+            }
+            
+            const selectedRole = wageGapData[roleIndex];
+            const femAnnual = selectedRole.femHourly * 38 * 52;
+            const mascAnnual = selectedRole.mascHourly * 38 * 52;
+            const gapPercent = ((selectedRole.mascHourly - selectedRole.femHourly) / selectedRole.femHourly * 100).toFixed(1);
+            
+            infoBox.innerHTML = `
+                <h4>🎯 Wage Gap Analysis for Your Role</h4>
+                <p><strong>Your Current Role:</strong> ${selectedRole.femRole}</p>
+                <p><strong>Same Role/Different Name/More Pay:</strong> ${selectedRole.mascRole}</p>
+                <p class="comparison">Your role's typical hourly rate: $${selectedRole.femHourly.toFixed(2)}/hr ($${femAnnual.toLocaleString('en-US', {maximumFractionDigits: 0})}/year)</p>
+                <p class="comparison">${selectedRole.mascRole} hourly rate: $${selectedRole.mascHourly.toFixed(2)}/hr ($${mascAnnual.toLocaleString('en-US', {maximumFractionDigits: 0})}/year)</p>
+                <p style="margin-top: 15px; font-style: italic;">Studies show you're doing the EXACT same functions as this job, but because it's worded differently you're paid differently.</p>
+                <p class="comparison">Wage gap: ${gapPercent}%</p>
+                <p style="margin-top: 15px; padding: 10px; background: #fff3cd; border-left: 4px solid var(--burgundy); font-size: 0.9em; line-height: 1.6;">
+                    <strong>📊 Important:</strong> These are highly researched estimates of typical Australian market rates for these roles. Your actual rate may be higher or lower depending on your experience, location, and employer. However, the systemic undervaluation of your role type remains—regardless of what you personally earn, this type of work is structurally underpaid compared to equivalent roles.
+                </p>
+            `;
+            
+            document.getElementById('marketSalary').value = Math.round(mascAnnual);
+            
+            document.getElementById('yourRoleTitle').textContent = selectedRole.femRole;
+            document.getElementById('yourRoleTitle').className = 'comparison-value';
+            document.getElementById('compRoleTitle').textContent = selectedRole.mascRole;
+            document.getElementById('compRoleTitle').className = 'comparison-value';
+            document.getElementById('compAnnualSalary').textContent = '$' + mascAnnual.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('compAnnualSalary').className = 'comparison-value';
+            document.getElementById('compHourlyRate').textContent = '$' + selectedRole.mascHourly.toFixed(2) + '/hr';
+            document.getElementById('compHourlyRate').className = 'comparison-value';
+            
+            calculateResults();
+            updateComparisonCards();
+        }
+
+        function updateComparisonCards() {
+            const currentSalary = parseFloat(document.getElementById('currentSalary').value) || 0;
+            
+            if (currentSalary > 0) {
+                const yourHourlyRate = currentSalary / (38 * 52);
+                document.getElementById('yourAnnualSalary').textContent = '$' + currentSalary.toLocaleString('en-US', {maximumFractionDigits: 0});
+                document.getElementById('yourAnnualSalary').className = 'comparison-value';
+                document.getElementById('yourHourlyRate').textContent = '$' + yourHourlyRate.toFixed(2) + '/hr';
+                document.getElementById('yourHourlyRate').className = 'comparison-value';
+            } else {
+                document.getElementById('yourAnnualSalary').textContent = 'Enter salary above';
+                document.getElementById('yourAnnualSalary').className = 'comparison-value placeholder';
+                document.getElementById('yourHourlyRate').textContent = '-';
+                document.getElementById('yourHourlyRate').className = 'comparison-value placeholder';
+            }
+        }
+
+        function calculateResults() {
+            const yearsWorked = parseFloat(document.getElementById('yearsWorked').value) || 0;
+            const currentSalary = parseFloat(document.getElementById('currentSalary').value) || 0;
+            const marketSalary = parseFloat(document.getElementById('marketSalary').value) || 0;
+            const currentAge = parseFloat(document.getElementById('currentAge').value) || 0;
+
+            const annualUnderpayment = marketSalary > currentSalary ? marketSalary - currentSalary : 0;
+            const cumulativeWealth = annualUnderpayment * yearsWorked;
+
+            // Calculate compound interest earnings ONLY (not including principal)
+            const rate = 0.05;
+            let compoundInterestEarnings = 0;
+            if (yearsWorked > 0 && annualUnderpayment > 0) {
+                const totalWithInterest = annualUnderpayment * (Math.pow(1 + rate, yearsWorked) - 1) / rate * (1 + rate);
+                compoundInterestEarnings = totalWithInterest - cumulativeWealth; // Interest only, not principal
+            }
+
+            const superRate = 0.105;
+            const annualSuperShortfall = annualUnderpayment * superRate;
+            const superShortfall = annualSuperShortfall * yearsWorked;
+
+            // Total = Lost wages + Interest earnings + Super
+            const totalLifetimeWealth = cumulativeWealth + compoundInterestEarnings + superShortfall;
+
+            // Calculate proper 10-year projection (what totals would be after 10 more years)
+            let tenYearProjection = 0;
+            if (annualUnderpayment > 0) {
+                const totalYears = yearsWorked + 10;
+                
+                // Lost wages over total years
+                const tenYearWages = annualUnderpayment * totalYears;
+                
+                // Interest earnings over total years (not including principal)
+                const tenYearTotalWithInterest = annualUnderpayment * (Math.pow(1 + rate, totalYears) - 1) / rate * (1 + rate);
+                const tenYearInterest = tenYearTotalWithInterest - tenYearWages;
+                
+                // Super over total years
+                const tenYearSuper = annualUnderpayment * superRate * totalYears;
+                
+                // Total after 10 more years
+                tenYearProjection = tenYearWages + tenYearInterest + tenYearSuper;
+            }
+
+            // Calculate lifetime to retirement (age 67)
+            const retirementAge = 67;
+            const yearsToRetirement = currentAge > 0 && currentAge < retirementAge ? retirementAge - currentAge : 0;
+            
+            let lifetimeWages = 0;
+            let lifetimeInterestEarnings = 0;
+            let lifetimeSuper = 0;
+            let lifetimeTotal = 0;
+
+            if (yearsToRetirement > 0 && annualUnderpayment > 0) {
+                // Lost wages to retirement
+                lifetimeWages = annualUnderpayment * yearsToRetirement;
+
+                // Interest earnings to retirement (not including principal)
+                const totalWithInterest = annualUnderpayment * (Math.pow(1 + rate, yearsToRetirement) - 1) / rate * (1 + rate);
+                lifetimeInterestEarnings = totalWithInterest - lifetimeWages;
+
+                // Super to retirement
+                lifetimeSuper = annualUnderpayment * superRate * yearsToRetirement;
+
+                // Total lifetime loss
+                lifetimeTotal = lifetimeWages + lifetimeInterestEarnings + lifetimeSuper;
+            }
+
+            // Update current period displays
+            document.getElementById('annualUnderpayment').textContent = '$' + annualUnderpayment.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('yearsUnderpaid').textContent = yearsWorked.toLocaleString('en-US', {maximumFractionDigits: 1});
+            document.getElementById('lifetimeWealth').textContent = '$' + cumulativeWealth.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('compoundInterest').textContent = '$' + compoundInterestEarnings.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('superShortfall').textContent = '$' + superShortfall.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('totalLifetimeWealth').textContent = '$' + totalLifetimeWealth.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('tenYearProjection').textContent = '$' + tenYearProjection.toLocaleString('en-US', {maximumFractionDigits: 0});
+
+            // Update lifetime to retirement displays
+            if (yearsToRetirement > 0) {
+                document.getElementById('yearsToRetirement').textContent = yearsToRetirement.toFixed(0);
+            } else {
+                document.getElementById('yearsToRetirement').textContent = currentAge > 0 ? '0 (at/past retirement)' : '-';
+            }
+            document.getElementById('lifetimeWages').textContent = '$' + lifetimeWages.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('lifetimeInterest').textContent = '$' + lifetimeInterestEarnings.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('lifetimeSuper').textContent = '$' + lifetimeSuper.toLocaleString('en-US', {maximumFractionDigits: 0});
+            document.getElementById('lifetimeTotal').textContent = '$' + lifetimeTotal.toLocaleString('en-US', {maximumFractionDigits: 0});
+        }
+
+        document.getElementById('yearsWorked').addEventListener('input', calculateResults);
+        document.getElementById('currentAge').addEventListener('input', calculateResults);
+        document.getElementById('currentSalary').addEventListener('input', function(e) {
+            // Prevent auto-scroll by capturing current scroll position
+            const scrollY = window.scrollY;
+            calculateResults();
+            updateComparisonCards();
+                  // Restore scroll position
+            window.scrollTo(0, scrollY);
+        });
+        document.getElementById('marketSalary').addEventListener('input', calculateResults);
+
+        // Initialize dropdown and calculations
+        populateRoleDropdown();
+        calculateResults();
+    </script>
+
+</body>
+</html>
