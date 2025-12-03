@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Next Steps | Underpaid No More</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Your Next Steps - Underpaid No More" />
+    <meta property="og:description" content="You know your numbers. Now choose your path to fair pay." />
+    <meta property="og:image" content="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid_No_More_Logo_PNG.png" />
+    <meta property="og:url" content="https://darlene-conscious.github.io/Underpaid-No-More/Calculator-Action-Hub.html" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Your Next Steps - Underpaid No More" />
+    <meta name="twitter:description" content="You know your numbers. Now choose your path to fair pay." />
+    <meta name="twitter:image" content="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid_No_More_Logo_PNG.png" />
+    
+    <style>
+        :root {
+            --burgundy: #8B3A5B;
+            --burgundy-dark: #6B2C4A;
+            --teal: #3D8B7B;
+            --pink: #F4E4EC;
+            --cream: #FFF9F5;
+            --text-dark: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--cream);
+        }
+
+        /* Logo Section */
+        .logo-section {
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--teal);
+            padding: 30px 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            font-style: italic;
+            max-width: 900px;
+            margin: 0 auto 15px auto;
+        }
+
+        .hero .emphasis {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            color: var(--pink);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Intro Text */
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+        }
+
+        .intro-text h2 {
+            font-size: 2em;
+            color: var(--burgundy);
+            margin-bottom: 20px;
+        }
+
+        .intro-text p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Section Header */
+        .section-header {
+            font-size: 2.2em;
+            text-align: center;
+            color: var(--burgundy);
+            margin: 60px 0 40px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Product Row */
+        .product-row {
+            display: grid;
+            grid-template-columns: 300px 1fr 250px;
+            gap: 30px;
+            align-items: center;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image-left img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .product-content h3 {
+            font-size: 1.8em;
+            color: var(--burgundy);
+            margin-bottom: 10px;
+        }
+
+        .product-content .price {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--teal);
+            margin-bottom: 15px;
+        }
+
+        .product-content .tagline {
+            font-size: 1.1em;
+            font-style: italic;
+            color: var(--burgundy);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .product-content .description p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .product-cta-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--teal, #2C7A7B);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .cta-button:hover {
+            background: var(--burgundy-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(139, 58, 91, 0.3);
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            background: var(--pink);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            font-style: italic;
+            line-height: 1.7;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-attribution {
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--burgundy);
+            font-style: normal;
+        }
+
+        .testimonial-cta {
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--burgundy);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .footer-contact {
+            margin-bottom: 20px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 8px;
+        }
+
+        .footer-contact a {
+            color: var(--pink);
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-resources {
+            margin: 20px 0;
+        }
+
+        .footer-resources a {
+            color: var(--pink);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-resources a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .hero .emphasis {
+                font-size: 1.2em;
+            }
+
+            .intro-text h2 {
+                font-size: 1.6em;
+            }
+
+            .intro-text p {
+                font-size: 1.1em;
+            }
+
+            .section-header {
+                font-size: 1.6em;
+            }
+
+            .product-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .product-image-left {
+                text-align: center;
+            }
+
+            .product-image-left img {
+                max-width: 250px;
+            }
+
+            .product-cta-right {
+                justify-content: stretch;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-resources a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo-section">
+        <div class="logo">
+            <img src="Underpaid No More_Logo.png" alt="Underpaid No More Logo">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>WHY YOU HAVE TO WORK TWICE AS HARD TO EARN HALF AS MUCH</h1>
+        <p style="font-weight: bold; font-size: 1.3em; margin: 25px 0; line-height: 1.6;">A powerful and compelling analysis of the pay gap system: how it operates, how it shows up in real life examples, and what you can do right now to overcome it.</p>
+        <p style="font-weight: bold; font-size: 1.4em; margin-top: 25px;">YOU CAN'T FIX WHAT YOU CAN'T SEE</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Intro Text -->
+        <div class="intro-text">
+            <p>Right now, your underpayment is invisible.</p>
+            <p>Hidden in job titles. Buried in salary bands. Disguised in performance reviews.</p>
+            <p><strong>But once you see the system—really see it—everything changes.</strong></p>
+            <p>You stop doubting yourself. You start seeing the pattern everywhere.</p>
+            <p><strong>And you finally know exactly what you're up against.</strong></p>
+            <p>This guide reveals the mechanisms that have been systematically undervaluing your work—and why understanding them is the first step to reclaiming what you're worth.</p>
+        </div>
+
+        <!-- Testimonial 1 -->
+        <div style="max-width: 800px; margin: 50px auto 40px auto; padding: 30px; background: var(--cream); border-left: 5px solid var(--burgundy); border-radius: 8px;">
+            <p style="font-size: 1.1em; line-height: 1.8; font-style: italic; color: #2c2c2c; margin-bottom: 20px;">
+                "This guide changed more for me than I could have imagined. My whole perspective of who I am in the world shifted. I show up now as the person I was always meant to be. Head high, back straight, shoulders back ... it gave me an internal shift I never realised I needed."
+            </p>
+            <p style="font-weight: bold; color: var(--burgundy); text-align: right; margin: 0;">
+                — Jennifer L., <span style="text-decoration: line-through;">HR Manager</span> Operations Manager - HR
+            </p>
+        </div>
+
+        <!-- CTA #1: See The Invisible System -->
+        <div style="background: var(--burgundy); border-radius: 15px; padding: 50px 30px; margin: 60px auto; text-align: center; max-width: 700px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+            <h2 style="color: white; font-size: 2em; margin-bottom: 20px; line-height: 1.3;">Ready To See What's Been Hidden?</h2>
+            <p style="color: white; font-size: 1.2em; margin-bottom: 30px; line-height: 1.6;">
+                The system that's kept you underpaid is about to become visible.
+            </p>
+            <a href="https://buy.stripe.com/28E28qa2xgtX0QE8v5cjS01" target="_blank" style="display: inline-block; background: white; color: var(--burgundy); padding: 20px 50px; border-radius: 10px; text-decoration: none; font-size: 1.4em; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                See The Invisible System - $30
+            </a>
+            <p style="color: var(--pink); margin-top: 25px; font-size: 1em; font-style: italic;">
+                Instant digital download • 7 comprehensive sections + bonus calculator
+            </p>
+        </div>
+
+
+        <!-- What's Inside the Guide -->
+        <div class="container" style="margin-top: -20px;">
+            <h2 style="text-align: center; color: var(--burgundy); font-size: 2.2em; margin: 0 0 20px 0; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">What's Inside This Guide</h2>
+            
+            <p style="text-align: center; font-size: 1.2em; margin: 0 auto 40px auto; max-width: 800px; line-height: 1.8;">
+                Everything you need to understand how the system works, why it targeted you, and what you can do right now.
+            </p>
+            
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                    
+                    <!-- Feature 1 -->
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 5px solid var(--teal);">
+                        <h3 style="color: var(--burgundy); font-size: 1.4em; margin-bottom: 15px;">Section 1: It Was Never Your Fault</h3>
+                        <p style="line-height: 1.7;">The structural forces that systematically undervalue your work—and why none of it was ever about your performance or worth.</p>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 5px solid var(--teal);">
+                        <h3 style="color: var(--burgundy); font-size: 1.4em; margin-bottom: 15px;">Section 2: What Is the Pay Gap?</h3>
+                        <p style="line-height: 1.7;">$966 million lost every single week in Australia. The breakthrough research that traces 6 out of 10 pay gap factors back to one hidden root cause: linguistic devaluation. This is the insight that changes everything.</p>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 5px solid var(--teal);">
+                        <h3 style="color: var(--burgundy); font-size: 1.4em; margin-bottom: 15px;">Section 3: How the System Hides Undervaluation</h3>
+                        <p style="line-height: 1.7;">The precise mechanisms—job titles, role language, salary bands—engineered to keep you underpaid, and how to finally see them for what they are.</p>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 5px solid var(--teal);">
+                        <h3 style="color: var(--burgundy); font-size: 1.4em; margin-bottom: 15px;">Section 4: The Identity Injury</h3>
+                        <p style="line-height: 1.7;">Why systemic underpayment damages your sense of self, how that damage compounds over time, and why healing starts with understanding it was never your fault.</p>
+                    </div>
+                    
+                    <!-- Feature 5 -->
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 5px solid var(--teal);">
+                        <h3 style="color: var(--burgundy); font-size: 1.4em; margin-bottom: 15px;">Section 5: What Your Pay Gap Number Really Means</h3>
+                        <p style="line-height: 1.7;">Decode your calculator results: what they reveal about your position, the lifetime financial impact, and why this number is just the beginning.</p>
+                    </div>
+                    
+                    <!-- Feature 6 -->
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 5px solid var(--teal);">
+                        <h3 style="color: var(--burgundy); font-size: 1.4em; margin-bottom: 15px;">Section 6: The 3 Paths to Reclaim Your Worth</h3>
+                        <p style="line-height: 1.7;">Three strategic pathways forward—Negotiate, Strategic Exit, Liberation Business—with clear guidance on which approach fits your circumstances right now.</p>
+                    </div>
+                    
+                    <!-- Feature 7 -->
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 5px solid var(--teal);">
+                        <h3 style="color: var(--burgundy); font-size: 1.4em; margin-bottom: 15px;">Section 7: Your Next Step</h3>
+                        <p style="line-height: 1.7;">Clear, actionable guidance tailored to where you are today and what you're ready to do next.</p>
+                    </div>
+                    
+                    <!-- Bonus Feature -->
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 5px solid var(--teal);">
+                        <h3 style="color: var(--burgundy); font-size: 1.4em; margin-bottom: 15px;">Bonus: Cost of Waiting Calculator</h3>
+                        <p style="line-height: 1.7;">Calculate exactly what inaction costs you every week, every month, every year—and why waiting isn't neutral, it's expensive.</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div style="max-width: 800px; margin: 50px auto 40px auto; padding: 30px; background: var(--cream); border-left: 5px solid var(--teal); border-radius: 8px;">
+            <p style="font-size: 1.1em; line-height: 1.8; font-style: italic; color: #2c2c2c; margin-bottom: 20px;">
+                "I thought I knew what the pay gap was. I was wrong. This guide gave me the language and framework to finally understand why I've been underpaid—and what to do about it."
+            </p>
+            <p style="font-weight: bold; color: var(--teal); text-align: right; margin: 0;">
+                — Maria S., <span style="text-decoration: line-through;">School Support Assistant</span> Student Engagement Officer
+            </p>
+        </div>
+
+        <!-- CTA #2: Get The Complete Guide -->
+        <div style="background: var(--teal); border-radius: 15px; padding: 50px 30px; margin: 20px auto 60px auto; text-align: center; max-width: 700px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+            <h2 style="color: white; font-size: 2em; margin-bottom: 20px; line-height: 1.3;">Everything You Need To Understand Your Underpayment</h2>
+            <p style="color: white; font-size: 1.2em; margin-bottom: 30px; line-height: 1.6;">
+                Seven strategic sections that expose how the system works, why it targeted you, and what you can do right now.
+            </p>
+            <a href="https://buy.stripe.com/28E28qa2xgtX0QE8v5cjS01" target="_blank" style="display: inline-block; background: white; color: var(--teal); padding: 20px 50px; border-radius: 10px; text-decoration: none; font-size: 1.4em; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                Get The Complete Guide - $30
+            </a>
+            <p style="color: var(--cream); margin-top: 25px; font-size: 1em; font-style: italic;">
+                Instant access • Complete framework • Bonus calculator included
+            </p>
+        </div>
+
+        <!-- Calculator CTA -->
+        <div style="background: var(--cream); border: 3px solid var(--teal); border-radius: 15px; padding: 40px; margin: 40px 0; text-align: center;">
+            <h2 style="color: var(--teal); font-size: 2em; margin-bottom: 15px;">🧮 Don't Know Your Pay Gap Number?</h2>
+            <p style="font-size: 1.3em; margin-bottom: 30px; font-weight: 500; line-height: 1.6;">Use our free calculator to discover exactly how much you've been underpaid—and what it's costing you right now.</p>
+            
+            <a href="https://darlene-conscious.github.io/Underpaid-No-More/Pay-Gap-Calculator-Interactive-V2.html" target="_blank" style="display: inline-block; background: var(--teal); color: white; padding: 20px 40px; border-radius: 10px; text-decoration: none; font-size: 1.3em; font-weight: bold; margin: 20px 0; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                Get Your Number First - FREE
+            </a>
+            
+            <p style="margin-top: 20px; font-style: italic; color: #666; font-size: 1.05em;">
+                Takes 2-3 minutes • Completely free • Shows your weekly, monthly, and lifetime losses
+            </p>
+        </div>
+
+        <!-- Book a Strategy Call -->
+    <div style="background: var(--pink); border: 3px solid var(--burgundy); border-radius: 15px; padding: 40px; margin: 40px 0; text-align: center;">
+        <h2 style="color: var(--burgundy); font-size: 2em; margin-bottom: 15px;">📞 Not Sure If This Guide Is Right For You?</h2>
+        <p style="font-size: 1.3em; margin-bottom: 20px; font-weight: 500;">Book a free 30-45 minute strategy call first</p>
+        
+        <div style="background: white; border-radius: 10px; padding: 25px; margin: 25px 0; text-align: left;">
+            <h3 style="color: var(--teal); margin-bottom: 15px;">What We'll Cover:</h3>
+            <ul style="margin-left: 25px; line-height: 2; font-size: 1.05em;">
+                <li>Your current pay gap situation and calculator results</li>
+                <li>Questions about your next steps and available resources</li>
+                <li>Which approach fits your circumstances right now</li>
+                <li>Concrete next steps you can take immediately</li>
+            </ul>
+        </div>
+        
+        <div style="background: var(--cream); border-radius: 10px; padding: 20px; margin: 20px 0;">
+            <p style="margin-bottom: 10px;"><strong>📅 Availability:</strong> Monday-Thursday, 5:00 PM - 11:00 PM AWST</p>
+            <p style="margin-bottom: 10px;"><strong>⏱️ Duration:</strong> 30-45 minutes</p>
+            <p style="margin-bottom: 0;"><strong>💰 Investment:</strong> FREE</p>
+        </div>
+        
+        <a href="https://calendar.app.google/kbunhTBzGZ5f8D2y5" target="_blank" style="display: inline-block; background: var(--burgundy); color: white; padding: 20px 40px; border-radius: 10px; text-decoration: none; font-size: 1.3em; font-weight: bold; margin: 20px 0; transition: all 0.3s ease;">
+            📅 BOOK YOUR FREE STRATEGY CALL
+        </a>
+        
+        <p style="margin-top: 20px; font-style: italic; color: #666; font-size: 1.05em;">
+            Whether you're exploring your options or ready to dive into action, this is your space to get clarity, ask questions, and determine your best next step.
+        </p>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div style="max-width: 800px; margin: 50px auto 40px auto; padding: 30px; background: var(--cream); border-left: 5px solid var(--burgundy); border-radius: 8px;">
+        <p style="font-size: 1.1em; line-height: 1.8; font-style: italic; color: #2c2c2c; margin-bottom: 20px;">
+            "The breakdown of how job titles are weaponized? Mind-blowing. I've been doing Management-level work with an Assistant title for 3 years. No wonder my salary was capped."
+        </p>
+        <p style="font-weight: bold; color: var(--burgundy); text-align: right; margin: 0;">
+            — Amanda T., <span style="text-decoration: line-through;">Sales Assistant</span> Business Development Executive
+        </p>
+    </div>
+
+    <!-- CTA #3: Reclaim Your Worth -->
+    <div style="background: var(--burgundy); border-radius: 15px; padding: 50px 30px; margin: 60px auto; text-align: center; max-width: 700px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+        <h2 style="color: white; font-size: 2em; margin-bottom: 20px; line-height: 1.3;">Stop Waiting. Start Reclaiming.</h2>
+        <p style="color: white; font-size: 1.2em; margin-bottom: 30px; line-height: 1.6;">
+            Every week you wait costs you $242.30. Every year, $12,600. Over a lifetime? $1.2-1.5 million.
+        </p>
+        <a href="https://buy.stripe.com/28E28qa2xgtX0QE8v5cjS01" target="_blank" style="display: inline-block; background: white; color: var(--burgundy); padding: 20px 50px; border-radius: 10px; text-decoration: none; font-size: 1.4em; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            Reclaim Your Worth - $30
+        </a>
+        <p style="color: var(--pink); margin-top: 25px; font-size: 1em; font-style: italic;">
+            The system won't fix itself. Understanding it is how you stop participating in your own undervaluation.
+        </p>
+    </div>
+
+    <!-- Financial Advice Disclaimer -->
+    <div style="background: #fff3cd; border-left: 4px solid #856404; padding: 20px; margin: 40px 0; border-radius: 8px;">
+        <p style="font-size: 0.95em; line-height: 1.6; margin: 0;">
+            <strong>⚖️ Legal Disclaimer:</strong> The information provided on this website, including all calculators, guides, and resources, is for educational and informational purposes only. It does not constitute financial, legal, or professional advice. We strongly recommend consulting with qualified financial advisors, legal professionals, or career counselors before making any significant career or financial decisions. Individual results may vary based on personal circumstances, location, industry, and market conditions. Past testimonials do not guarantee future results.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #8B3A5B; color: white; padding: 40px 20px; margin-top: 60px;">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h3 style="font-size: 1.8em; margin-bottom: 15px;">Underpaid No More</h3>
+            <p style="font-size: 1.1em; margin-bottom: 25px; line-height: 1.6;">
+                Helping people understand their worth and close the pay gap.
+            </p>
+            
+            <div style="margin-bottom: 20px;">
+                <p style="font-size: 1em; margin-bottom: 10px;">
+                    <strong>Contact Us:</strong>
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Email: <a href="/cdn-cgi/l/email-protection#563237243a33383378233832332426373f3238393b39243316313b373f3a7835393b" style="color: white; text-decoration: none;"><span class="__cf_email__" data-cfemail="bbdfdac9d7ded5de95ced5dfdec9cbdad2dfd5d4d6d4c9defbdcd6dad2d795d8d4d6">[email&#160;protected]</span></a>
+                </p>
+                
+                <p style="font-size: 1em; margin-bottom: 10px;">
+                    <strong>Resources:</strong>
+                </p>
+                <p style="margin-bottom: 8px;">
+                    <a href="https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html" style="color: white; text-decoration: none; margin-right: 20px;">📚 Resource Hub</a>
+                    <a href="https://darlene-conscious.github.io/Underpaid-No-More/Pay-Gap-Calculator-WORKING.html" style="color: white; text-decoration: none; margin-right: 20px;">🧮 Pay Gap Calculator</a>
+                    <a href="https://darlene-conscious.github.io/UNM-Blogs/UNM-Blog-Landing-Page.html" style="color: white; text-decoration: none;">📝 Blog</a>
+                </p>
+                
+                <p style="font-size: 1em; margin-bottom: 10px; margin-top: 20px;">
+                    <strong>Follow Us:</strong>
+                </p>
+                <p style="margin-bottom: 8px;">
+                    <a href="https://www.instagram.com/underpaid.no.more?igsh=MXFqN3E5M2NkazRzag==" target="_blank" style="color: white; text-decoration: none; margin-right: 20px;">📷 Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61583650460751" target="_blank" style="color: white; text-decoration: none;">📘 Facebook</a>
+                </p>
+                
+                <p style="font-size: 1em; margin-bottom: 10px; margin-top: 20px;">
+                    <strong>📞 Book Your Strategy Call:</strong>
+                </p>
+                <p style="margin-bottom: 15px; font-size: 0.95em; line-height: 1.8;">
+                    Ready to close your pay gap? Book a free 30-45 minute call to get personalized guidance.
+                </p>
+                <p style="margin-bottom: 8px;">
+                    <a href="https://calendar.app.google/kbunhTBzGZ5f8D2y5" target="_blank" style="color: white; background: rgba(255,255,255,0.2); padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: bold; border: 2px solid white; transition: all 0.3s ease;">
+                        📅 Book Your Free Call
+                    </a>
+                </p>
+                <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">
+                    Available: Mon-Thu, 5:00 PM - 11:00 PM AWST
+                </p>
+            </div>
