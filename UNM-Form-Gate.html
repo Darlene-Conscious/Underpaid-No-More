@@ -236,13 +236,28 @@
     </div>
 
     <script>
-        // Redirect to Hub after Mailchimp form submission
-        document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function(e) {
-            // Let the form submit to Mailchimp first
-            setTimeout(function() {
-                // Then redirect to your Hub
-                window.location.href = 'https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html';
-            }, 1000); // Wait 1 second to ensure Mailchimp receives the data
+        // Wait for Mailchimp's success response before redirecting
+        var form = document.getElementById('mc-embedded-subscribe-form');
+        var successDiv = document.getElementById('mce-success-response');
+        
+        // Create a MutationObserver to watch for Mailchimp's success message
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (successDiv.style.display !== 'none' && successDiv.innerText.length > 0) {
+                    // Mailchimp confirmed success, now redirect
+                    setTimeout(function() {
+                        window.location.href = 'https://darlene-conscious.github.io/Underpaid-No-More/Underpaid-No-More-Hub.html';
+                    }, 1500); // Give user 1.5 seconds to see success message
+                }
+            });
+        });
+        
+        // Start observing the success div for changes
+        observer.observe(successDiv, {
+            attributes: true,
+            childList: true,
+            characterData: true,
+            subtree: true
         });
     </script>
 </body>
