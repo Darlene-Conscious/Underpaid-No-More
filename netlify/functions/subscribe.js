@@ -1,23 +1,21 @@
 exports.handler = async function(event, context) {
 
-    // Only allow POST requests
-    if (event.httpMethod !== 'POST') {
-        return {
-            statusCode: 405,
-            body: JSON.stringify({ error: 'Method not allowed' })
-        };
-    }
-
-    // Allow requests from your GitHub Pages site
+    // Allow ALL origins (fixes CORS from GitHub Pages)
     const headers = {
-        'Access-Control-Allow-Origin': 'https://darlene-conscious.github.io',
+        'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Content-Type': 'application/json'
     };
 
-    // Handle preflight
+    // Handle preflight OPTIONS request
     if (event.httpMethod === 'OPTIONS') {
         return { statusCode: 200, headers, body: '' };
+    }
+
+    // Only allow POST
+    if (event.httpMethod !== 'POST') {
+        return { statusCode: 405, headers, body: JSON.stringify({ error: 'Method not allowed' }) };
     }
 
     try {
@@ -53,26 +51,20 @@ exports.handler = async function(event, context) {
         });
 
         const result = await response.json();
+        console.log('EmailOctopus result:', JSON.stringify(result));
 
-        if (response.ok) {
-            return {
-                statusCode: 200,
-                headers,
-                body: JSON.stringify({ success: true })
-            };
-        } else {
-            return {
-                statusCode: 400,
-                headers,
-                body: JSON.stringify({ error: result.error || 'EmailOctopus error' })
-            };
-        }
+        return {
+            statusCode: 200,
+            headers,
+            body: JSON.stringify({ success: true, result })
+        };
 
     } catch (error) {
+        console.error('Function error:', error.message);
         return {
             statusCode: 500,
             headers,
-            body: JSON.stringify({ error: 'Server error: ' + error.message })
+            body: JSON.stringify({ error: error.message })
         };
     }
 };
