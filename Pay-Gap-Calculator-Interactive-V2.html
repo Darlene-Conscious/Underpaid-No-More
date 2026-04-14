@@ -1019,7 +1019,7 @@
 
             // Send to Netlify function (which calls EmailOctopus server-side)
             try {
-                await fetch('https://paygapcalculatorcapture.netlify.app/.netlify/functions/subscribe', {
+                await fetch('https://unm-pay-gap-calculator.pages.dev/.netlify/functions/subscribe', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ firstName, email, role, annualGap, totalLost, lifetimeTotal })
